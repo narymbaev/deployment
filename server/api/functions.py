@@ -34,8 +34,8 @@ def git_pull():
 
 print("THe current branch: ", get_current_branch())
 print("The last commit: ", get_last_commit_id())
-print("Details of last commit: ", get_last_commit())
-print("Merged: ", git_merge('ft/bug'))
+# print("Details of last commit: ", get_last_commit())
+# print("Merged: ", git_merge('ft/bug'))
 print("Pushed", git_push())
 # print(git_pull())
 # print(git_checkout('feature-branch'))
