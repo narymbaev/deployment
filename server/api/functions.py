@@ -39,3 +39,5 @@ print("Merged: ", git_merge('ft/bug'))
 print("Pushed", git_push())
 # print(git_pull())
 # print(git_checkout('feature-branch'))
+
+print("NEW FEATURE FROM ANOTHER BRANCH")
