@@ -4,6 +4,9 @@ def get_current_branch():
     result = subprocess.run(['git', 'rev-parse', '--abbrev-ref', 'HEAD'], stdout=subprocess.PIPE)
     return result.stdout.decode('utf-8').strip()
 
+def get_last_commit_id():
+    result = subprocess.run(['git', 'log', '--format="%H"', '-n', '1'], stdout=subprocess.PIPE)
+    return result.stdout.decode('utf-8').strip()
 
 def get_last_commit():
     result = subprocess.run(['git', 'log', '-1'], stdout=subprocess.PIPE)
@@ -29,9 +32,10 @@ def git_pull():
     result = subprocess.run(['git', 'pull'], stdout=subprocess.PIPE)
     return result.stdout.decode('utf-8').strip()
 
-# print(get_current_branch())
+print(get_current_branch())
+print("The last commit: ", get_last_commit_id())
 print(get_last_commit())
-# print(git_push())
-# print(git_pull())
+print(git_push())
+print(git_pull())
 # print(git_merge('feature-branch'))
 # print(git_checkout('feature-branch'))
