@@ -12,7 +12,6 @@ def get_last_commit():
     result = subprocess.run(['git', 'log', '-1'], stdout=subprocess.PIPE)
     return result.stdout.decode('utf-8').strip()
 
-
 def git_push():
     result = subprocess.run(['git', 'push'], stdout=subprocess.PIPE)
     return result.stdout.decode('utf-8').strip()

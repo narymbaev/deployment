@@ -17,6 +17,10 @@ class App(Sanic):
 
 app = App()
 
+app.blueprint([
+    api_bp
+])
+
 
 @app.route('/', methods=['GET', 'HEAD'], name='root_index')
 # @D.render_to_template('index.html')
